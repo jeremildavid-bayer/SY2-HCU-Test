@@ -1,0 +1,2 @@
+export LD_LIBRARY_PATH=/home/user/Imaxeon/bin/resources/Lib/Qt/lib:/home/user/Imaxeon/bin/resources/Lib/QtWebApp
+export DISPLAY=:0.0

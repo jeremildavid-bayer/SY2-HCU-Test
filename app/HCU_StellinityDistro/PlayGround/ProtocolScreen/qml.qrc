@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>PhaseItem.qml</file>
+        <file>OptionItem.qml</file>
+        <file>OptionList.qml</file>
+        <file>StepItem.qml</file>
+        <file>StepList.qml</file>
+        <file>ProtocolScreen.qml</file>
+        <file>DragObject.qml</file>
+    </qresource>
+</RCC>

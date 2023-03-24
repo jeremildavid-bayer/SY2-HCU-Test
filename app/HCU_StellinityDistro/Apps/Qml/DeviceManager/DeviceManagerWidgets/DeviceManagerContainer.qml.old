@@ -1,0 +1,466 @@
+import QtQuick 2.9
+import "../DeviceManagerWidgets"
+import "../../Widgets"
+
+Rectangle {
+    property bool mudsInserted: dsDevice.mudsInserted
+    property string wasteBinState: dsDevice.wasteBinState
+    property string outletDoorState: dsDevice.outletDoorState
+    property string sodError: dsWorkflow.sodError
+    property var fluidSourceMuds: dsDevice.fluidSourceMuds
+    property var fluidSourceSyringe1: dsDevice.fluidSourceSyringe1
+    property var fluidSourceSyringe2: dsDevice.fluidSourceSyringe2
+    property var fluidSourceSyringe3: dsDevice.fluidSourceSyringe3
+    property string syringeState1: dsDevice.syringeState1
+    property string syringeState2: dsDevice.syringeState2
+    property string syringeState3: dsDevice.syringeState3
+    property var fluidSourceBottle1: dsDevice.fluidSourceBottle1
+    property var fluidSourceBottle2: dsDevice.fluidSourceBottle2
+    property var fluidSourceBottle3: dsDevice.fluidSourceBottle3
+    property string sudsState: dsDevice.sudsState
+    /*property string bottleState1: dsDevice.bottleState1
+    property string bottleState2: dsDevice.bottleState2
+    property string bottleState3: dsDevice.bottleState3*/
+    property string mudsLineState: dsDevice.mudsLineState
+    property string widgetType: "INTERACTIVE" //INTERACTIVE, ICON
+    property alias mainWidget: widgetMain
+    property alias iconWidget: widgetIcon
+    property var widgetMap: {"INTERACTIVE": mainWidget, "ICON": iconWidget}
+    property var activeAlerts: dsAlert.activeAlerts
+
+    signal signalComponentClicked(string component)
+
+    // TODO: Rename DeviceWidget to DeviceOverview
+
+    id: root
+    color: "purple"
+
+    DeviceManagerContainerMain {
+        id: widgetMain
+        visible: (widgetType === "INTERACTIVE") && root.visible
+        anchors.fill: parent
+
+        onSignalItemClicked: {
+            signalComponentClicked(itemName);
+        }
+    }
+
+    DeviceManagerContainerIcon {
+        id: widgetIcon
+        visible: (widgetType === "ICON")
+        anchors.fill: parent
+    }
+
+    onOutletDoorStateChanged: reloadOutletAirDetector();
+    onSodErrorChanged: reloadSODProcess();
+    onFluidSourceSyringe1Changed: reloadSyringe(0);
+    onFluidSourceSyringe2Changed: reloadSyringe(1);
+    onFluidSourceSyringe3Changed: reloadSyringe(2);
+    onFluidSourceBottle1Changed: reloadBottle(0);
+    onFluidSourceBottle2Changed: reloadBottle(1);
+    onFluidSourceBottle3Changed: reloadBottle(2);
+    onSudsStateChanged: reloadSuds();
+
+    // TODO: bottleState is removed, handle this!!
+    /*onBottleState1Changed: reloadBottleState(0);
+    onBottleState2Changed: reloadBottleState(1);
+    onBottleState3Changed: reloadBottleState(2);*/
+    onSyringeState1Changed: reloadSyringeState(0, syringeState1);
+    onSyringeState2Changed: reloadSyringeState(1, syringeState2);
+    onSyringeState3Changed: reloadSyringeState(2, syringeState3);
+
+    onFluidSourceMudsChanged: {
+        if (!visible)
+        {
+            return;
+        }
+
+        reloadOutletAirDetector();
+        widgetMap[widgetType].mudsBusy = ((fluidSourceMuds !== undefined) && (fluidSourceMuds.IsBusy !== undefined) && (fluidSourceMuds.IsBusy));
+    }
+
+    onMudsLineStateChanged: {
+        if (!visible)
+        {
+            return;
+        }
+        widgetMap[widgetType].mudsLineState = mudsLineState;
+    }
+
+    onActiveAlertsChanged: {
+        if (!visible)
+        {
+            return;
+        }
+        setAlertState();
+    }
+
+    onVisibleChanged: {
+        reload();
+    }
+
+    function reload()
+    {
+        if (!visible)
+        {
+            return;
+        }
+
+        reloadBottle(0);
+        reloadBottle(1);
+        reloadBottle(2);
+        reloadBottleState(0);
+        reloadBottleState(1);
+        reloadBottleState(2);
+        reloadOutletAirDetector();
+        reloadSODProcess();
+        reloadSuds();
+        reloadSyringe(0);
+        reloadSyringe(1);
+        reloadSyringe(2);
+        setAlertState();
+        reloadSyringeState(0, syringeState1);
+        reloadSyringeState(1, syringeState2);
+        reloadSyringeState(2, syringeState3);
+
+        widgetMap[widgetType].mudsLineState = mudsLineState;
+        widgetMap[widgetType].mudsBusy = ((fluidSourceMuds !== undefined) && (fluidSourceMuds.IsBusy !== undefined) && (fluidSourceMuds.IsBusy));
+    }
+
+    function reloadBottle(bottleIdx)
+    {
+        if (!visible)
+        {
+            return;
+        }
+
+        var fluidSourceBottle = null;
+
+        if (bottleIdx === 0)
+        {
+            fluidSourceBottle = fluidSourceBottle1;
+        }
+        else if (bottleIdx === 1)
+        {
+            fluidSourceBottle = fluidSourceBottle2;
+        }
+        else if (bottleIdx === 2)
+        {
+            fluidSourceBottle = fluidSourceBottle3;
+        }
+
+        if ( (fluidSourceBottle === undefined) ||
+             (fluidSourceBottle === null) )
+        {
+            return;
+        }
+
+        if (Object.keys(fluidSourceBottle).length !== 0)
+        {
+            var sourceName = "";
+            var sourceConcentration = "";
+
+            if ( (fluidSourceBottle.SourcePackages !== undefined) &&
+                 (fluidSourceBottle.SourcePackages.length > 0) )
+            {
+                sourceName = fluidSourceBottle.SourcePackages[0].Brand;
+                sourceConcentration = fluidSourceBottle.SourcePackages[0].Concentration;;
+            }
+
+            if (bottleIdx === 0)
+            {
+                widgetMap[widgetType].source1Busy = fluidSourceBottle.IsBusy;
+                widgetMap[widgetType].source1Name = sourceName;
+                widgetMap[widgetType].source1Concentration = sourceConcentration;
+            }
+            else if (bottleIdx === 1)
+            {
+                widgetMap[widgetType].source2Busy = fluidSourceBottle.IsBusy;
+                widgetMap[widgetType].source2Name = sourceName;
+                widgetMap[widgetType].source2Concentration = sourceConcentration;
+            }
+            else if (bottleIdx === 2)
+            {
+                widgetMap[widgetType].source3Busy = fluidSourceBottle.IsBusy;
+                widgetMap[widgetType].source3Name = sourceName;
+                widgetMap[widgetType].source3Concentration = sourceConcentration;
+            }
+        }
+        else
+        {
+            if (bottleIdx === 0)
+            {
+                widgetMap[widgetType].source1Busy = false;
+            }
+            else if (bottleIdx === 1)
+            {
+                widgetMap[widgetType].source2Busy = false;
+            }
+            else if (bottleIdx === 2)
+            {
+                widgetMap[widgetType].source3Busy = false;
+            }
+        }
+    }
+
+    function reloadSuds()
+    {
+        if (!visible)
+        {
+            return;
+        }
+
+        if (sudsState === undefined)
+        {
+            return;
+        }
+
+        widgetMap[widgetType].sudsBusy = (sudsState === "PRIMING");
+    }
+
+    function reloadOutletAirDetector()
+    {
+        // TODO: complete the color handling of the outlet air detector
+    }
+
+    function reloadSyringeState(syringeIdx, syringeState)
+    {
+        if (syringeState === undefined)
+        {
+            return;
+        }
+
+        if (syringeIdx === 0)
+        {
+            widgetMap[widgetType].syringe1State = syringeState;
+        }
+        else if (syringeIdx === 1)
+        {
+            widgetMap[widgetType].syringe2State = syringeState;
+        }
+        else if (syringeIdx === 2)
+        {
+            widgetMap[widgetType].syringe3State = syringeState;
+        }
+    }
+
+    function reloadSyringe(syringeIdx)
+    {
+        if (!visible)
+        {
+            return;
+        }
+
+        var fluidSourceSyringe;
+
+        if (syringeIdx === 0)
+        {
+            fluidSourceSyringe = fluidSourceSyringe1;
+        }
+        else if (syringeIdx === 1)
+        {
+            fluidSourceSyringe = fluidSourceSyringe2;
+        }
+        else if (syringeIdx === 2)
+        {
+            fluidSourceSyringe = fluidSourceSyringe3;
+        }
+        else
+        {
+            return;
+        }
+
+        if ( fluidSourceSyringe === undefined)
+        {
+            return;
+        }
+
+        if ( (fluidSourceSyringe !== null) &&
+             (fluidSourceSyringe.CurrentVolumes !== undefined) )
+        {
+            if (syringeIdx === 0)
+            {
+                widgetMap[widgetType].syringe1Volume = fluidSourceSyringe.CurrentVolumes[0];
+            }
+            else if (syringeIdx === 1)
+            {
+                widgetMap[widgetType].syringe2Volume = fluidSourceSyringe.CurrentVolumes[0];
+            }
+            else if (syringeIdx === 2)
+            {
+                widgetMap[widgetType].syringe3Volume = fluidSourceSyringe.CurrentVolumes[0];
+            }
+        }
+        else
+        {
+            widgetMap[widgetType].syringe1Volume = -1;
+            widgetMap[widgetType].syringe2Volume = -1;
+            widgetMap[widgetType].syringe3Volume = -1;
+        }
+    }
+
+    function reloadBottleState(bottleIdx)
+    {
+        if (bottleIdx === 0)
+        {
+            widgetMap[widgetType].source1State = bottleState1;
+        }
+        else if (bottleIdx === 1)
+        {
+            widgetMap[widgetType].source2State = bottleState2;
+        }
+        else if (bottleIdx === 2)
+        {
+            widgetMap[widgetType].source3State = bottleState3;
+        }
+    }
+
+    function reloadSODProcess()
+    {
+        if (!visible)
+        {
+            return;
+        }
+
+        if (sodError === undefined)
+        {
+            return;
+        }
+
+        widgetMap[widgetType].showSudsAlert = (sodError === "AUTO_PRIME_FAILED");
+    }
+
+    //===========================================================
+    // Alert Handling Section
+    //============================================================
+    function setAlertState()
+    {
+        if (activeAlerts === undefined)
+        {
+            return;
+        }
+
+        if (activeAlerts.length === 0)
+        {
+            //Clear any active alerts
+            widgetMap[widgetType].showWasteBinAlert = false;
+            widgetMap[widgetType].showOutletAirDetectorAlert = false;
+            widgetMap[widgetType].showSudsAlert = false;
+            widgetMap[widgetType].showSource1Alert = false;
+            widgetMap[widgetType].showSource2Alert = false;
+            widgetMap[widgetType].showSource3Alert = false;
+            widgetMap[widgetType].showMudsAlert = false;
+            return;
+        }
+
+        checkMudsAlerts();
+        checkOutletAirDetectorAlerts();
+        checkSourceAlerts();
+        checkSudsAlerts();
+        checkWasteContainerAlerts();
+    }
+
+    function checkWasteContainerAlerts()
+    {
+        for (var i = 0; i < activeAlerts.length; i++)
+        {
+            if (activeAlerts[i].CodeName === "WasteContainerMissing")
+            {
+                widgetMap[widgetType].showWasteBinAlert = true;
+                return;
+            }
+            else if (activeAlerts[i].CodeName === "WasteContainerFull")
+            {
+                widgetMap[widgetType].showWasteBinAlert = true;
+                return;
+            }
+        }
+
+        widgetMap[widgetType].showWasteBinAlert = false;
+    }
+
+    function checkOutletAirDetectorAlerts()
+    {
+        for (var i = 0; i < activeAlerts.length; i++)
+        {
+            // TODO: should be in MUDS
+            if ( (activeAlerts[i].CodeName === "OutletAirDetectorFault") ||
+                 (activeAlerts[i].CodeName === "OutletAirDoorLeftOpen") ||
+                 (activeAlerts[i].CodeName === "OutletAirDetected") )
+            {
+                widgetMap[widgetType].showOutletAirDetectorAlert = true;
+                return;
+            }
+        }
+
+        widgetMap[widgetType].showOutletAirDetectorAlert = false;
+    }
+
+    function checkSudsAlerts()
+    {
+        for (var i = 0; i < activeAlerts.length; i++)
+        {
+            if ( (activeAlerts[i].CodeName === "SUDSChangeRequired") ||
+                  (activeAlerts[i].CodeName === "SUDSSensorFault") ||
+                  (activeAlerts[i].CodeName === "ProtocolAdvancedInSUDS") )
+            {
+                widgetMap[widgetType].showSudsAlert = true;
+                return;
+            }
+        }
+
+        widgetMap[widgetType].showSudsAlert = false;
+    }
+
+    function checkSourceAlerts()
+    {
+        var source1AlertActive = false;
+        var source2AlertActive = false;
+        var source3AlertActive = false;
+        var i = 0;
+        for (i = 0; i < activeAlerts.length; i++)
+        {
+            if (activeAlerts[i].CodeName === "BulkUseLifeExceeded")
+            {
+                if (activeAlerts[i].Data === "BS0")
+                {
+                    source1AlertActive = true;
+                }
+                else if (activeAlerts[i].Data === "BC1")
+                {
+                    source2AlertActive = true;
+                }
+                else if (activeAlerts[i].Data === "BC2")
+                {
+                    source3AlertActive = true;
+                }
+            }
+        }
+
+        widgetMap[widgetType].showSource1Alert = source1AlertActive;
+        widgetMap[widgetType].showSource2Alert = source2AlertActive;
+        widgetMap[widgetType].showSource3Alert = source3AlertActive;
+    }
+
+    function checkMudsAlerts()
+    {
+        for (var i = 0; i < activeAlerts.length; i++)
+        {
+            var codeName = activeAlerts[i].CodeName;
+            if ( (codeName === "MUDSUseLifeExceeded") ||
+                 (codeName === "MUDSUseLifeLimitEnforced") ||
+                 (codeName === "HeatMaintainerCutoff") ||
+                 (codeName === "HeatMaintainerLockout") ||
+                 (codeName === "MUDSRestraintUnlatched") ||
+                 (codeName === "MUDSEjectedRemovalRequired") ||
+                 (codeName === "MotorPositionFault") ||
+                 (codeName === "StopcockEngagementFault") )
+            {
+                widgetMap[widgetType].showMudsAlert = true;
+                return;
+            }
+        }
+
+        widgetMap[widgetType].showMudsAlert = false;
+    }
+}

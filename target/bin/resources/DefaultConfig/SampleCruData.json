@@ -1,0 +1,53 @@
+﻿{
+    "WorklistEntries": [
+        {"DicomFields":{"accessionNumber":{"Name":"accessionNumber","TranslateName":true,"TranslateValue":false,"Value":"","ValueType":"string"},"patientBirthDate":{"Name":"patientBirthDate","TranslateName":true,"TranslateValue":false,"Value":"2019-05-08T11:11:11.0000000","ValueType":"datetime"},"patientId":{"Name":"patientId","TranslateName":true,"TranslateValue":false,"Value":"","ValueType":"string"},"patientName":{"Name":"patientName","TranslateName":true,"TranslateValue":false,"Value":"james yoo","ValueType":"string"},"patientSex":{"Name":"patientSex","TranslateName":true,"TranslateValue":true,"Value":"Male","ValueType":"string"},"studyDateTime":{"Name":"studyDateTime","TranslateName":true,"TranslateValue":false,"Value":"0001-01-01T00:00:00.0000000","ValueType":"datetime"},"studyDescription":{"Name":"studyDescription","TranslateName":true,"TranslateValue":false,"Value":"","ValueType":"string"}},"IsAnonymous":true,"StudyInstanceUid":"00000000-0000-0000-0000-000000000000"},
+        {"DicomFields":{"accessionNumber":{"Name":"accessionNumber","TranslateName":true,"TranslateValue":false,"Value":"528194447","ValueType":"string"},"patientBirthDate":{"Name":"patientBirthDate","TranslateName":true,"TranslateValue":false,"Value":"2019-05-08T19:45:12.0000000","ValueType":"datetime"},"patientId":{"Name":"patientId","TranslateName":true,"TranslateValue":false,"Value":"98O9KR5ZO2Y0","ValueType":"string"},"patientName":{"Name":"patientName","TranslateName":true,"TranslateValue":false,"Value":"JEAN HILL","ValueType":"string"},"patientSex":{"Name":"patientSex","TranslateName":true,"TranslateValue":true,"Value":"Female","ValueType":"string"},"studyDateTime":{"Name":"studyDateTime","TranslateName":true,"TranslateValue":false,"Value":"2019-05-08T20:19:05.0000000","ValueType":"datetime"},"studyDescription":{"Name":"studyDescription","TranslateName":true,"TranslateValue":false,"Value":"71550 - CHEST WITHOUT CONTRAST","ValueType":"string"}},"IsAnonymous":false,"StudyInstanceUid":"1.2.400.1980429690582019.636929412310130000"},
+        {"DicomFields":{"accessionNumber":{"Name":"accessionNumber","TranslateName":true,"TranslateValue":false,"Value":"424887052","ValueType":"string"},"patientBirthDate":{"Name":"patientBirthDate","TranslateName":true,"TranslateValue":false,"Value":"0001-01-01T00:00:00.0000000","ValueType":"datetime"},"patientId":{"Name":"patientId","TranslateName":true,"TranslateValue":false,"Value":"1DPLY4Z2SNGIE","ValueType":"string"},"patientName":{"Name":"patientName","TranslateName":true,"TranslateValue":false,"Value":"LYNN OLSON","ValueType":"string"},"patientSex":{"Name":"patientSex","TranslateName":true,"TranslateValue":true,"Value":"Female","ValueType":"string"},"studyDateTime":{"Name":"studyDateTime","TranslateName":true,"TranslateValue":false,"Value":"2019-05-08T20:19:05.0000000","ValueType":"datetime"},"studyDescription":{"Name":"studyDescription","TranslateName":true,"TranslateValue":false,"Value":"70551 - BRAIN WITHOUT CONTRAST","ValueType":"string"}},"IsAnonymous":false,"StudyInstanceUid":"1.2.400.743694695582019.636929412310140000"},
+        {"DicomFields":{"accessionNumber":{"Name":"accessionNumber","TranslateName":true,"TranslateValue":false,"Value":"879684157","ValueType":"string"},"patientBirthDate":{"Name":"patientBirthDate","TranslateName":true,"TranslateValue":false,"Value":"0001-01-01T00:00:00.0000000","ValueType":"datetime"},"patientId":{"Name":"patientId","TranslateName":true,"TranslateValue":false,"Value":"1C9GUY1G9XM2G","ValueType":"string"},"patientName":{"Name":"patientName","TranslateName":true,"TranslateValue":false,"Value":"WILLIAM ALLEN","ValueType":"string"},"patientSex":{"Name":"patientSex","TranslateName":true,"TranslateValue":true,"Value":"Male","ValueType":"string"},"studyDateTime":{"Name":"studyDateTime","TranslateName":true,"TranslateValue":false,"Value":"2019-05-08T20:19:05.0000000","ValueType":"datetime"},"studyDescription":{"Name":"studyDescription","TranslateName":true,"TranslateValue":false,"Value":"74175 - CTA ABDOMEN WITH AND WITHOUT CONTRAST","ValueType":"string"}},"IsAnonymous":false,"StudyInstanceUid":"1.2.400.311211590582019.636929412310150000"},
+        {"DicomFields":{"accessionNumber":{"Name":"accessionNumber","TranslateName":true,"TranslateValue":false,"Value":"724128577","ValueType":"string"},"patientBirthDate":{"Name":"patientBirthDate","TranslateName":true,"TranslateValue":false,"Value":"0001-01-01T00:00:00.0000000","ValueType":"datetime"},"patientId":{"Name":"patientId","TranslateName":true,"TranslateValue":false,"Value":"1B690HL100NWE","ValueType":"string"},"patientName":{"Name":"patientName","TranslateName":true,"TranslateValue":false,"Value":"BILLY SILVA","ValueType":"string"},"patientSex":{"Name":"patientSex","TranslateName":true,"TranslateValue":true,"Value":"Male","ValueType":"string"},"studyDateTime":{"Name":"studyDateTime","TranslateName":true,"TranslateValue":false,"Value":"2019-05-08T20:19:05.0000000","ValueType":"datetime"},"studyDescription":{"Name":"studyDescription","TranslateName":true,"TranslateValue":false,"Value":"73702 - CTA LOWER EXTREMITY WITH AND WITHOUT CONTRAST","ValueType":"string"}},"IsAnonymous":false,"StudyInstanceUid":"1.2.400.1022710567582019.636929412310160000"}
+    ],
+
+    "CurrentInjectorExam": {
+        "ExamInputs": {
+            "CatheterPlacement":{
+                "IsEnabled":false,
+                "Name":"CatheterPlacement",
+                "NeedsTranslated":false,
+                "Units":"",
+                "ValidDataType":"list",
+                "ValidList":["","james","semaj"],
+                "ValidRange":{"LowerLimitInclusive":0,"ResolutionIncrement":0,"UpperLimitInclusive":0},
+                "Value":""
+            },
+            "CatheterType":{
+                "IsEnabled":false,
+                "Name":"CatheterType",
+                "NeedsTranslated":false,
+                "Units":"",
+                "ValidDataType":"object",
+                "ValidList":["{\r\n  \"Name\": null,\r\n  \"HexColor\": null\r\n}","{\r\n  \"Name\": \"kyle\",\r\n  \"HexColor\": \"#88C541\"\r\n}","{\r\n  \"Name\": \"elyk\",\r\n  \"HexColor\": \"#DB499A\"\r\n}"],
+                "ValidRange":{"LowerLimitInclusive":0,"ResolutionIncrement":0,"UpperLimitInclusive":0},
+                "Value":"{\r\n  \"Name\": null,\r\n  \"HexColor\": null\r\n}"
+            },
+            "PatientHeight":{
+                "IsEnabled":false,
+                "Name":"PatientHeight",
+                "NeedsTranslated":false,
+                "Units":"cm",
+                "ValidDataType":"double",
+                "ValidList":[],
+                "ValidRange":{"LowerLimitInclusive":0,"ResolutionIncrement":1,"UpperLimitInclusive":216},
+                "Value":"184"
+            },
+            "PatientWeight":{"IsEnabled":false,"Name":"PatientWeight","NeedsTranslated":false,"Units":"kg","ValidDataType":"double","ValidList":[],"ValidRange":{"LowerLimitInclusive":0,"ResolutionIncrement":0.1,"UpperLimitInclusive":160},"Value":"128"}
+        },
+        "ExamResults":{
+            "Notes":{"IsEnabled":false,"Name":"Notes","NeedsTranslated":false,"Units":"","ValidDataType":"string","ValidList":[],"ValidRange":{"LowerLimitInclusive":0,"ResolutionIncrement":1,"UpperLimitInclusive":256},"Value":""},
+            "TechnologistId":{"IsEnabled":false,"Name":"TechnologistId","NeedsTranslated":false,"Units":"","ValidDataType":"list","ValidList":[],"ValidRange":{"LowerLimitInclusive":0,"ResolutionIncrement":0,"UpperLimitInclusive":0},"Value":""}
+        },
+        "LinkedAccessions":[{"Entry":{"DicomFields":{"accessionNumber":{"Name":"accessionNumber","TranslateName":true,"TranslateValue":false,"Value":"750562872","ValueType":"string"},"patientBirthDate":{"Name":"patientBirthDate","TranslateName":true,"TranslateValue":false,"Value":"0001-01-01T00:00:00.0000000","ValueType":"datetime"},"patientId":{"Name":"patientId","TranslateName":true,"TranslateValue":false,"Value":"1234567890","ValueType":"string"},"patientName":{"Name":"patientName","TranslateName":true,"TranslateValue":false,"Value":"Kim King","ValueType":"string"},"patientSex":{"Name":"patientSex","TranslateName":true,"TranslateValue":true,"Value":"Male","ValueType":"string"},"studyDateTime":{"Name":"studyDateTime","TranslateName":true,"TranslateValue":false,"Value":"2019-05-14T20:19:05.0000000","ValueType":"datetime"},"studyDescription":{"Name":"studyDescription","TranslateName":true,"TranslateValue":false,"Value":"71550 - CHEST WITHOUT CONTRAST","ValueType":"string"}},"IsAnonymous":false,"StudyInstanceUid":"1.2.400.10620627305172019.636934366004980000"},"IsLinked":false}],
+        "GUID":"3be5e74d-bed4-4ffa-8a31-7667761c86a2",
+        "WorklistDetails":{"All":[],"Entry":{"DicomFields":{"accessionNumber":{"Name":"accessionNumber","TranslateName":true,"TranslateValue":false,"Value":"911824769","ValueType":"string"},"patientBirthDate":{"Name":"patientBirthDate","TranslateName":true,"TranslateValue":false,"Value":"2/21/1961 12:00:00 AM","ValueType":"string"},"patientId":{"Name":"patientId","TranslateName":true,"TranslateValue":false,"Value":"PPNZG4SV8062","ValueType":"string"},"patientName":{"Name":"patientName","TranslateName":true,"TranslateValue":false,"Value":"EDWARD WRIGHT","ValueType":"string"},"patientSex":{"Name":"patientSex","TranslateName":true,"TranslateValue":true,"Value":"Male","ValueType":"string"},"studyDateTime":{"Name":"studyDateTime","TranslateName":true,"TranslateValue":false,"Value":"2019-05-13T20:19:05.0000000","ValueType":"datetime"},"studyDescription":{"Name":"studyDescription","TranslateName":true,"TranslateValue":false,"Value":"71550 - CHEST WITHOUT CONTRAST","ValueType":"string"}},"IsAnonymous":false,"StudyInstanceUid":"1.2.400.4800215485132019.636933590348940000"},"Panel":[]}
+    }
+}
+

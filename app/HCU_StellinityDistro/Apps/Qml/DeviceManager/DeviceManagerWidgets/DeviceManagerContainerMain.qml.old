@@ -1,0 +1,348 @@
+import QtQuick 2.9
+import "../../Widgets"
+import "../../Util.js" as Util
+
+Rectangle {
+    property int fluidSourceWidth: btnSyringeGroup.width * 0.2585
+    property int fluidSourceHeight: height * 0.2
+
+    property var selectableButtons: []
+
+    property real syringe1Volume: -1
+    property real syringe2Volume: -1
+    property real syringe3Volume: -1
+    property string syringe1State: "NO_MUDS"
+    property string syringe2State: "NO_MUDS"
+    property string syringe3State: "NO_MUDS"
+    property string source1Name: ""
+    property string source1Concentration: ""
+    property string source1State: ""
+    property string source2Name: ""
+    property string source2Concentration: ""
+    property string source2State: ""
+    property string source3Name: ""
+    property string source3Concentration: ""
+    property string source3State: ""
+    property bool sudsBusy: false
+    property bool mudsBusy: false
+    property bool source1Busy: false
+    property bool source2Busy: false
+    property bool source3Busy: false
+    property bool outletAirDoorOpen: false
+    property string mudsLineState: "MISSING"
+    // Alerts
+    property bool showWasteBinAlert: false
+    property bool showOutletAirDetectorAlert: false
+    property bool showSudsAlert: false
+    property bool showSource1Alert: false
+    property bool showSource2Alert: false
+    property bool showSource3Alert: false
+    property bool showMudsAlert: false
+    property int alertIconWidth: width * 0.072
+
+
+    signal signalItemClicked(string itemName)
+
+    id: root
+    //color: colorMap.mainBackground
+    color: "pink"
+
+    Row {
+        id: sourceGroup
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.leftMargin: parent.width * 0.02
+        width: parent.width * 0.82
+        height: parent.height * 0.2
+        spacing: parent.width * 0.034
+
+        DeviceManagerGenericIconButton {
+            id: btnSource1
+            height: parent.height
+            width: (parent.width - (parent.spacing * 2)) / 3
+            iconText: "\ue909"
+
+            DeviceManagerBottleMain {
+                anchors.fill: parent
+                sourceColor: colorMap.saline
+                state: source1State
+                sourceName: source1Name
+                sourceConcentration: source1Concentration
+                isAlertActive: showSource1Alert
+            }
+
+            LoadingGif {
+                id: source1LoadingGif
+                visible: source1Busy
+            }
+
+            onBtnClicked: {
+                setButtonSelectedStates(btnSource1);
+                signalItemClicked("BOTTLE1");
+            }
+        }
+
+        DeviceManagerGenericIconButton {
+            id: btnSource2
+            height: 179 + 10
+            width: btnSource1.width
+            color: "transparent"
+
+            iconText: "\ue909"
+            iconColor: "grey"
+
+            DeviceManagerBottleMain {
+                id: source2
+                anchors.top: parent.top
+                anchors.topMargin: 5
+                anchors.left: parent.left
+                anchors.leftMargin: 6
+                height: 179
+                width: 194                
+
+                sourceColor: colorMap.contrast1
+                state: source2State
+                sourceName: source2Name
+                sourceConcentration: source2Concentration
+                isAlertActive: showSource2Alert
+            }
+
+            onBtnClicked: {
+                setButtonSelectedStates(btnSource2);
+                signalItemClicked("BOTTLE2");
+            }
+
+
+            LoadingGif{
+                id:source2LoadingGif
+                visible: source2Busy
+            }
+        }
+
+        DeviceManagerGenericIconButton {
+            id: btnSource3
+            height: 179 + 10
+            width: btnSource1.width
+
+            iconText: "\ue909"
+            iconColor: "grey"
+
+            DeviceManagerBottleMain {
+                id: source3
+                anchors.top: parent.top
+                anchors.topMargin: 5
+                anchors.left: parent.left
+                anchors.leftMargin: 6
+                height: 179
+                width: 194
+
+                sourceColor: dsDevice.sameContrasts ? colorMap.contrast1 : colorMap.contrast2
+                state: source3State
+                sourceName: source3Name
+                sourceConcentration: source3Concentration
+                isAlertActive: showSource3Alert
+            }
+
+            onBtnClicked: {
+                setButtonSelectedStates(btnSource3);
+                signalItemClicked("BOTTLE3");
+            }
+
+
+            LoadingGif{
+                id:source3LoadingGif
+                visible: source3Busy
+            }
+        }
+    }
+
+    DeviceManagerMudsLineMain {
+        id: mudsLine
+        anchors.left: sourceGroup.left
+        anchors.top: sourceGroup.bottom
+        anchors.topMargin: parent.height * 0.007
+        anchors.bottom: btnSuds.top
+        anchors.bottomMargin: parent.height * 0.007
+        anchors.right: parent.right
+        mudsState: mudsLineState
+    }
+
+    /*AirDetectorWidgetMain {
+        id: airDetectorWidget
+        anchors.right: mudsLine.right
+        anchors.verticalCenter: mudsLine.verticalCenter
+        width: height
+        height: mudsLine.height * 0.17
+        mudsState: mudsLineState
+
+
+    }*/
+
+    DeviceManagerGenericButton {
+        id: btnSyringeGroup
+        anchors.top: mudsLine.top
+        anchors.topMargin: mudsLine.height * 0.06
+        anchors.bottom: mudsLine.bottom
+        anchors.bottomMargin: mudsLine.height * 0.06
+        width: sourceGroup.width * 1.05
+        radius: buttonRadius * 1.8
+        isAlertActive: showMudsAlert
+
+        Row {
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: parent.height * 0.02
+            anchors.top: parent.top
+            anchors.topMargin: parent.height * 0.02
+            //anchors.horizontalCenter: parent.horizontalCenter
+            width: sourceGroup.width
+            anchors.left: parent.left
+            anchors.leftMargin: sourceGroup.anchors.leftMargin
+            spacing: sourceGroup.spacing
+
+            DeviceManagerSyringeMain {
+                anchors.bottom: parent.bottom
+                anchors.top: parent.top
+                width: btnSource1.width
+                syringeColor: colorMap.saline
+                volume: syringe1Volume
+                state: syringe1State
+            }
+
+            DeviceManagerSyringeMain {
+                anchors.bottom: parent.bottom
+                anchors.top: parent.top
+                width: btnSource1.width
+                syringeColor: colorMap.contrast1
+                volume: syringe2Volume
+                state: syringe2State
+            }
+
+            DeviceManagerSyringeMain {
+                anchors.bottom: parent.bottom
+                anchors.top: parent.top
+                width: btnSource1.width
+                syringeColor: dsDevice.sameContrasts ? colorMap.contrast1 : colorMap.contrast2
+                volume: syringe3Volume
+                state: syringe3State
+            }
+        }
+
+        onBtnClicked: {
+            setButtonSelectedStates(btnSyringeGroup);
+            signalItemClicked("MUDS");
+        }
+
+
+        LoadingGif {
+            id: mudsLoadingGif
+            visible: mudsBusy
+        }
+
+        WarningIcon {
+            width: alertIconWidth
+            height: width
+            anchors.right: parent.right
+            anchors.top: parent.top
+            anchors.rightMargin: -width / 2
+            anchors.topMargin: -height / 2
+            visible: showOutletAirDetectorAlert
+        }
+    }
+
+    DeviceManagerGenericButton {
+        id: btnWasteBin
+        width: parent.width * 0.22
+        height: parent.height * 0.18
+        anchors.bottom: parent.bottom
+        isAlertActive: showWasteBinAlert
+
+        DeviceManagerWCIcon {
+            anchors.centerIn: parent
+            width: parent.width * 0.75
+            height: parent.height * 0.7
+        }
+
+        WarningIcon {
+            width: alertIconWidth
+            height: width
+            anchors.right: parent.right
+            anchors.top: parent.top
+            anchors.rightMargin: -width / 2
+            anchors.topMargin: -height / 2
+            visible: showWasteBinAlert
+        }
+
+        onBtnClicked: {
+            setButtonSelectedStates(btnWasteBin);
+            signalItemClicked("WASTE");
+        }
+
+    }
+
+    DeviceManagerGenericButton {
+        id: btnSuds
+        width: parent.width * 0.22
+        height: parent.height * 0.18
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: btnSyringeGroup.horizontalCenter
+        isAlertActive: showSudsAlert
+
+        content: [
+            DeviceManagerSudsMain {
+                anchors.centerIn: parent
+                width: parent.width * 0.75
+                height: parent.height * 0.7
+            },
+            LoadingGif {
+                id: sudsLoadingGif
+                visible: sudsBusy
+            }
+        ]
+
+        WarningIcon {
+            width: alertIconWidth
+            height: width
+            anchors.right: parent.right
+            anchors.top: parent.top
+            anchors.rightMargin: -width / 2
+            anchors.topMargin: -height / 2
+            visible: showSudsAlert
+       }
+
+        onBtnClicked: {
+            setButtonSelectedStates(btnSuds);
+            signalItemClicked("SUDS");
+        }
+    }
+
+    onVisibleChanged: {
+        reload();
+    }
+
+    Component.onCompleted: {
+        selectableButtons.push(btnSource1);
+        selectableButtons.push(btnSource2);
+        selectableButtons.push(btnSource3);
+        selectableButtons.push(btnSyringeGroup);
+        selectableButtons.push(btnWasteBin);
+        selectableButtons.push(btnSuds);
+    }
+
+    function reload()
+    {
+        if (!visible)
+        {
+            return;
+        }
+        setButtonSelectedStates(btnSyringeGroup);
+    }
+
+    function setButtonSelectedStates(selectedId)
+    {
+        for (var i = 0; i < selectableButtons.length; i++)
+        {
+            selectableButtons[i].setSelected(false);
+        }
+        selectedId.setSelected(true);
+    }
+}

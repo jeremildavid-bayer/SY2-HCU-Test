@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>PlayGround.qml</file>
+        <file>MySlider.qml</file>
+    </qresource>
+</RCC>

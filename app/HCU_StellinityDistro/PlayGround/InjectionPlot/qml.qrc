@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>InjectionPlot.qml</file>
+        <file>ReminderIcon.qml</file>
+        <file>fonts/fontawesome-webfont.ttf</file>
+        <file>TransitionExample.qml</file>
+        <file>TransitionLine.qml</file>
+        <file>PhaseTransition.qml</file>
+        <file>ListFade.qml</file>
+        <file>ScrollBar.qml</file>
+        <file>Util.js</file>
+    </qresource>
+</RCC>

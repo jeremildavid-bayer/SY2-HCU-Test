@@ -1,0 +1,97 @@
+#!/bin/bash
+usage(){
+	echo "Usage: $0"
+	exit 1
+}
+
+IMAXEON_PATH="/home/user/Imaxeon"
+PATH_GCC="$HOME/Qt5.15.9_gcc_64"
+FIRST_BOOT_INFO_FILE="$IMAXEON_PATH/temp/first_boot.inf"
+FIRST_BOOT_LOG_FILE="$IMAXEON_PATH/temp/first_boot.log"
+BUILD_TYPE=$(grep '<BUILD_TYPE>' < $IMAXEON_PATH/doc/version.inf | sed 's/<BUILD_TYPE>//g')
+
+if [ -f /IMAX_USER/db/dev.cfg ]; then
+    # execute the network development setting. It should be executable.
+    /IMAX_USER/db/dev.cfg
+fi
+
+#-------------------------------------------------------------
+# Normal Boot
+function bootNormal {
+    #disable touchscreen while booting up - should be reanabled by the HCU app
+    $IMAXEON_PATH/script/set_touchscreen.sh disable
+
+	# Remove all system logs
+	sudo rm /var/log/*.log*
+	sudo rm /var/crash/*
+	sudo rm -rf /home/user/.cache/*
+
+	# Set Timezone
+	sudo timedatectl set-timezone UTC
+
+    # Sync DateTime
+    $IMAXEON_PATH/script/sync_platform_date_time.sh
+
+	# Set Volume
+	pactl set-sink-mute 0 0
+	pactl set-sink-volume 0 130%
+	
+	# Enable coredump
+	sudo sh -c "echo "/IMAX_USER/coredump/core.%e" > /proc/sys/kernel/core_pattern"
+	ulimit -c unlimited
+
+	# Reset network connection
+	#$IMAXEON_PATH/script/set_network.sh $(< /IMAX_USER/temp/network_connection.inf)
+	
+	# Run screensaver
+	xscreensaver -nosplash &> /dev/null&
+
+	# Load HCU Libraries with export LD_LIBRARY_PATH=...	
+	source /home/user/Imaxeon/bin/ld_lib_path.txt
+
+	# Run Main App
+	$IMAXEON_PATH/bin/HCU_StellinityDistroLauncher &> /dev/null&
+
+	# Start Serve Bayer-Connect Web Page
+	#angular-http-server --path $IMAXEON_PATH/bin/HCU_StellinityWebUI -p 5000 &> /dev/null&
+}
+
+# First Boot
+function bootFirst {
+    # Do following tasks if booted first time.
+    (sudo service network-manager restart);
+    sleep 2
+    $IMAXEON_PATH/first_boot/first_boot.sh > $FIRST_BOOT_LOG_FILE
+    #sudo reboot
+    sleep 2
+}
+
+# Set permission for current filesystem
+(sudo chown -R user:user ~/Imaxeon);
+(mkdir -p /IMAX_USER/coredump);
+(mkdir -p /IMAX_USER/temp);
+(mkdir -p /IMAX_USER/temp/upgrade);
+(mkdir -p /IMAX_USER/log);
+(mkdir -p /IMAX_USER/db);
+(mkdir -p /IMAX_USER/info);
+(mkdir -p /IMAX_USER/cru);
+(mkdir -p /IMAX_USER/cru/backup);
+(touch /IMAX_USER/db/local.cfg);
+(touch /IMAX_USER/db/global.cfg);
+(touch /IMAX_USER/db/capabilities.cfg);
+(touch /IMAX_USER/db/lastDigest.json);
+(touch /IMAX_USER/db/lastAlerts.json);
+(sudo chmod -R 777 ~/Imaxeon/);
+
+# Backwards compatibility - now we number old log files up to 3
+rename 's/old/old1/' /IMAX_USER/log/*.old.log
+
+if [ -e $FIRST_BOOT_INFO_FILE ]; then
+    bootNormal
+else
+    bootFirst
+    bootNormal
+fi
+
+exit 0
+

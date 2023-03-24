@@ -1,0 +1,137 @@
+import QtQuick 2.9
+import "../DeviceManagerWidgets"
+
+Rectangle {
+    id: root
+    property int fluidSourceWidth: width * 0.23
+    property int fluidSourceHeight: height * 0.2
+    property int fontSize: 14
+
+    property real syringe1Volume: -1
+    property real syringe2Volume: -1
+    property real syringe3Volume: -1
+    property string syringe1State: "NO_MUDS"
+    property string syringe2State: "NO_MUDS"
+    property string syringe3State: "NO_MUDS"
+    property string source1Name: ""
+    property string source1Concentration: ""
+    property string source1State: "NO_SOURCE"
+    property string source2Name: ""
+    property string source2Concentration: ""
+    property string source2State: "NO_SOURCE"
+    property string source3Name: ""
+    property string source3Concentration: ""
+    property string source3State: "NO_SOURCE"
+    property bool sudsBusy: false
+    property bool mudsBusy: false
+    property bool source1Busy: false
+    property bool source2Busy: false
+    property bool source3Busy: false
+    property string mudsLineState: "MISSING"
+    // Alerts TODO all
+    property bool showWasteBinAlert: false
+    property bool showOutletAirDetectorAlert: false
+    property bool showSudsAlert: false
+    property bool showSource1Alert: false
+    property bool showSource2Alert: false
+    property bool showSource3Alert: false
+    property bool showMudsAlert: false
+
+    color: "transparent"
+
+    Row {
+        id: sourceGroup
+        anchors.top: parent.top
+        //anchors.topMargin: root.width * 0.02
+        anchors.left: parent.left
+        spacing: root.height * 0.064
+        property real sourceHeightRatio: 0.169724
+
+        DeviceManagerBottleIcon {
+            id: source1
+            height: root.height * sourceGroup.sourceHeightRatio
+            sourceColor: colorMap.saline
+            state: source1State
+            isAlertActive: showSource1Alert
+        }
+        DeviceManagerBottleIcon {
+            id: source2
+            height: root.height * sourceGroup.sourceHeightRatio
+            sourceColor: colorMap.contrast1
+            state: source2State
+            isAlertActive: showSource2Alert
+        }
+        DeviceManagerBottleIcon {
+            id: source3
+            height: root.height * sourceGroup.sourceHeightRatio
+            sourceColor: dsDevice.sameContrasts ? colorMap.contrast1 : colorMap.contrast2
+            state: source3State
+            isAlertActive: showSource3Alert
+        }
+    }
+
+    DeviceManagerMudsLineIcon {
+        id: mudsLine
+        anchors.left: sourceGroup.left
+        anchors.top: sourceGroup.bottom
+        anchors.topMargin: root.height * 0.027
+
+        width: root.height * 0.747
+        height: root.height * 0.605
+
+        mudsState: mudsLineState
+    }
+
+    Row {
+        id: syringeGroup
+        anchors.top: sourceGroup.bottom
+        anchors.topMargin: root.height * 0.082
+        anchors.left: sourceGroup.left
+
+        spacing: root.height * 0.064
+
+        DeviceManagerSyringeIcon {
+            id: syringe1
+            height: root.height * 0.49541
+            syringeColor: colorMap.saline
+            state: syringe1State
+            volume: syringe1Volume
+            isAlertActive: root.showMudsAlert
+        }
+
+        DeviceManagerSyringeIcon {
+            id: syringe2
+            height: root.height * 0.49541
+            syringeColor: colorMap.contrast1
+            state: syringe2State
+            volume: syringe2Volume
+            isAlertActive: root.showMudsAlert
+        }
+
+        DeviceManagerSyringeIcon {
+            id: syringe3
+            height: root.height * 0.49541
+            syringeColor: dsDevice.sameContrasts ? colorMap.contrast1 : colorMap.contrast2
+            state: syringe3State
+            volume: syringe3Volume
+            isAlertActive: root.showMudsAlert
+        }
+    }
+
+    DeviceManagerWCIcon {
+        id: wasteBin
+        height: root.height * 0.169
+        width: root.height * 0.188
+
+        anchors.top: mudsLine.bottom
+        anchors.left: sourceGroup.left
+        anchors.topMargin: root.height * 0.0275
+    }
+
+    DeviceManagerSudsIcon {
+        id: sudsIcon
+        height: root.height * 0.169
+        anchors.horizontalCenter: syringeGroup.horizontalCenter
+        anchors.top: wasteBin.top
+    }
+}

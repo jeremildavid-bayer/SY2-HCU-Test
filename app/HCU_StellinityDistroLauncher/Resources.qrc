@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Launcher">
+        <file>Launcher.qml</file>
+    </qresource>
+</RCC>

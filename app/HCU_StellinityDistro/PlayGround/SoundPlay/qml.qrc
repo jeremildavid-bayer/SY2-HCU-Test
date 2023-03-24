@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>SoundPlay.qml</file>
+        <file>Resources/PlungerMove.ogg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,2251 @@
+{
+    "Config": {
+        "Hidden_InjectionPlanTemplateGroups": {
+            "ChangedAt": "2020-03-02T00:42:09.289Z",
+            "DefaultValue": null,
+            "DisplayIndex": 22,
+            "KeyName": "Hidden_InjectionPlanTemplateGroups",
+            "Units": "",
+            "ValidDataType": "list",
+            "ValidList": [
+            ],
+            "ValidRange": {
+            },
+            "Value": [
+                {
+                    "Name": "Head and Brain",
+                    "PlanDigests": [
+                        {
+                            "GUID": "661ec8f0-6db1-4537-b097-5a05a1994ea8",
+                            "HistId": "8f907e4f-5b65-4869-a01f-bf305b9d39c3",
+                            "IsPersonalized": false,
+                            "Name": "Brain, Perfusion + CTA, Vasospasm (FSS)",
+                            "Plan": {
+                                "Description": "PHILIPS ICT: Vascular",
+                                "GUID": "da5e7d02-6403-4c70-8db5-32fe351acaa7",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Brain, Perfusion + CTA, Vasospasm (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "3f38bda4-cdbd-4a21-a478-23c032b1ff1a",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Timing Bolus",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:08.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 40,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "51b7acfc-f061-44e0-b34f-2823b4e560f5"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "1afc6ad3-04bb-4a9b-8ae0-ca1b96247622",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:16.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 80,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:10.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "a25fdb07-5f3f-4c82-bebc-d27b7e483ff7"
+                                    }
+                                ],
+                                "Template": "661ec8f0-6db1-4537-b097-5a05a1994ea8"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "9b028a36-5d67-429d-8250-2f86c32a096d",
+                            "HistId": "d1260cb7-3fd1-4de8-b0ae-a53c61f38f27",
+                            "IsPersonalized": false,
+                            "Name": "Head CTA, 16-Slice (FSS)",
+                            "Plan": {
+                                "Description": "SIEMENS SOMATOM SENSATION 16: Head",
+                                "GUID": "261c1506-8715-40da-877f-3dcffa0dc705",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Head CTA, 16-Slice (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "3bc8ce9b-06a1-4356-8703-32f0d11aef8c",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:33.333",
+                                                "FlowRate": 3,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "9d1961c1-8a60-4e07-88fe-fb3df8e600e0"
+                                    }
+                                ],
+                                "Template": "9b028a36-5d67-429d-8250-2f86c32a096d"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "e7defa69-fa0c-48c4-bf10-f021d66bbc3c",
+                            "HistId": "5aa36d69-b700-4410-80e9-33aff8357c4e",
+                            "IsPersonalized": false,
+                            "Name": "Head CTA, Flash Single Energy (FSS)",
+                            "Plan": {
+                                "Description": "SIEMENS FLASH DUAL SOURCE- UPDATED 7/9/13: Head",
+                                "GUID": "a20633fc-a192-48f7-be37-e6bd030813ed",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Head CTA, Flash Single Energy (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "f1f7315d-2fba-4a09-a27b-5993a5aa7507",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:20.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "d099d243-27d0-4b8c-bbf4-0b77d24f1500"
+                                    }
+                                ],
+                                "Template": "e7defa69-fa0c-48c4-bf10-f021d66bbc3c"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "5fc22625-a3cb-48be-ac37-5733c1082d64",
+                            "HistId": "955719a7-0368-41f8-9b95-ea04b757f8c2",
+                            "IsPersonalized": false,
+                            "Name": "Head, 256-Slice (FSS)",
+                            "Plan": {
+                                "Description": "PHILIPS ICT: Head",
+                                "GUID": "a226c3e0-6cf1-4b10-ac85-fa63370e71f2",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Head, 256-Slice (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "116dc20f-b33d-4c6c-85b7-a7e201f08bc8",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:01:40.000",
+                                                "FlowRate": 1,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:50.000",
+                                                "FlowRate": 1,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "7ddd864c-69e9-4b5d-8959-78d795840dd6"
+                                    }
+                                ],
+                                "Template": "5fc22625-a3cb-48be-ac37-5733c1082d64"
+                            },
+                            "State": "Ready"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Cardiac",
+                    "PlanDigests": [
+                        {
+                            "GUID": "073907bb-36b4-42d0-9cce-658ef52a4f56",
+                            "HistId": "b71ce59e-def1-40dd-820a-54fcc2f65045",
+                            "IsPersonalized": false,
+                            "Name": "Cardiac Functional Study (FSS)",
+                            "Plan": {
+                                "Description": "SIEMENS SOMATOM SENSATION 16: Cariothoracic",
+                                "GUID": "eba3c05e-ff76-43f2-9e91-51e4f9632a84",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Cardiac Functional Study (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "e74178ec-0b95-4796-a054-d59d2f2eb4c4",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:28.571",
+                                                "FlowRate": 3.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:08.571",
+                                                "FlowRate": 3.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 30,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "774c866d-e5df-4d6f-9861-ee08bb99b0dd"
+                                    }
+                                ],
+                                "Template": "073907bb-36b4-42d0-9cce-658ef52a4f56"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "7668bff7-b25a-4522-8487-82ab354dd2ef",
+                            "HistId": "136b66e1-6ae9-4e47-ac4b-480b33af1275",
+                            "IsPersonalized": false,
+                            "Name": "Cardiac Routine (FSS)",
+                            "Plan": {
+                                "Description": "SIEMENS SOMATOM SENSATION 64: Cardiac",
+                                "GUID": "d4899427-d34b-4db5-a073-df0aaedab3c5",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Cardiac Routine (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "965dc4fb-1d09-491c-9e09-f9f49e65aa7b",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:20.000",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 80,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:10.000",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 40,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "1bc86707-51a0-44c1-801d-4ebfb214036c"
+                                    }
+                                ],
+                                "Template": "7668bff7-b25a-4522-8487-82ab354dd2ef"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "4364f875-c30e-4ea4-a772-b98c2bf2164a",
+                            "HistId": "befe3388-c255-46bc-95c2-3d47186e1ba1",
+                            "IsPersonalized": false,
+                            "Name": "Chest Pain Study - Flash (FSS)",
+                            "Plan": {
+                                "Description": "CTisus: SIEMENS FLASH DUAL SOURCE- UPDATED 7/9/13: Cardiac",
+                                "GUID": "12780777-251d-4cdc-82e9-4aa4a6e385eb",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Chest Pain Study - Flash (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "9f46709c-0cdb-4e85-94f6-439a4a66d870",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:13.333",
+                                                "FlowRate": 6,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 80,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:05.000",
+                                                "FlowRate": 6,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 30,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "1f2e8ce1-7206-49bb-873f-e0b27f2eeac4"
+                                    }
+                                ],
+                                "Template": "4364f875-c30e-4ea4-a772-b98c2bf2164a"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "cb981372-fcfc-4cd6-a623-928b863940cc",
+                            "HistId": "8f3e218d-7fff-4f58-a1a7-f37fd7ba4af7",
+                            "IsPersonalized": false,
+                            "Name": "Coronary CTA - Bolus Tracking, Prospective Gated (FSS)",
+                            "Plan": {
+                                "Description": "CTisus: PHILIPS ICT: Cardiac",
+                                "GUID": "d82c7853-5f31-46d1-979f-c061d69631e2",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Coronary CTA - Bolus Tracking, Prospective Gated (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "dd4bb48e-34bb-4bcb-9c23-91a5df8a8b62",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:12.500",
+                                                "FlowRate": 6,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 75,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 50,
+                                                "Duration": "00:00:08.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 40,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:10.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "92c91e5f-8ff2-4a8d-84eb-e76a708d9bae"
+                                    }
+                                ],
+                                "Template": "cb981372-fcfc-4cd6-a623-928b863940cc"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "a6617910-0e10-482f-b400-74c1f1fbea78",
+                            "HistId": "21f32850-84e2-45c1-a738-efce15d7a3fe",
+                            "IsPersonalized": false,
+                            "Name": "Coronary CTA, Pacer Bolus (FSS)",
+                            "Plan": {
+                                "Description": "ECR 2017 C-3033 Study showed that with the application of the initial pacer bolus, the CM extravasation rate is reduced when compared to the routinely used three-phasic protocol.",
+                                "GUID": "c646112b-5d84-4a22-ad75-1a5d53e9aa38",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Coronary CTA, Pacer Bolus (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "fdae5989-2980-4390-ab84-621c19a81320",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:02.500",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 10,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:15.454",
+                                                "FlowRate": 5.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 85,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 25,
+                                                "Duration": "00:00:07.272",
+                                                "FlowRate": 5.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 40,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:05.454",
+                                                "FlowRate": 5.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 30,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "15edf845-35a5-4183-9e4a-ba298989b207"
+                                    }
+                                ],
+                                "Template": "a6617910-0e10-482f-b400-74c1f1fbea78"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "35965eb0-3386-47be-b39d-8539a9750a64",
+                            "HistId": "a50c1c64-8ff6-44e7-8b8d-bf8c5e5a2dec",
+                            "IsPersonalized": false,
+                            "Name": "Coronary CTA, Timing Bolus (FSS)",
+                            "Plan": {
+                                "Description": "SIEMENS SOMATOM SENSATION 64: Cardiac",
+                                "GUID": "e4614e2e-8123-4d19-8db0-cac3e04be00b",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Coronary CTA, Timing Bolus (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "e1c8a5f2-8ed2-4c2a-a7d3-ac95172af94c",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Timing Bolus",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:05.000",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 20,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "bb06aafa-c541-470c-990e-e7b0194ccbea"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "d869084d-06d2-4f0b-809d-1062f047a2f7",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:20.000",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 80,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "b5563811-17d9-4dcc-b16a-b7eff419031e"
+                                    }
+                                ],
+                                "Template": "35965eb0-3386-47be-b39d-8539a9750a64"
+                            },
+                            "State": "Ready"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Neck and Chest",
+                    "PlanDigests": [
+                        {
+                            "GUID": "57662059-f477-41fc-aab1-2e5e2ee38211",
+                            "HistId": "377a7970-9521-4e7b-87de-c6372e1391b7",
+                            "IsPersonalized": false,
+                            "Name": "CAP and Neck Soft Tissue w/TI (FAS)",
+                            "Plan": {
+                                "Description": "Seven and Eight Phase Protocols (DF-130264)",
+                                "GUID": "8d8244f1-5e9e-4038-9781-5dca8d86a30c",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "CAP and Neck Soft Tissue w/TI (FAS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "591bea0e-c904-4376-bc59-a3e0d0d204b5",
+                                        "IsNotScannerSynchronized": true,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": true,
+                                        "Name": "Test Injection",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:08.000",
+                                                "FlowRate": 2.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 20,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "4c2373a2-c9e0-4c49-aad6-1dee4a0d9a20"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "d765fa29-46db-457a-a77d-54cc4a4540f9",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Chest+Abdomen+Pelvis",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:32.000",
+                                                "FlowRate": 2.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 80,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:16.000",
+                                                "FlowRate": 2.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 40,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "10c56199-7180-477c-8ea7-0423aebf153f"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "063742a6-9fbc-468b-8b18-57ad22a1b7cd",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Neck Soft Tissue",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:16.000",
+                                                "FlowRate": 2.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 40,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:16.000",
+                                                "FlowRate": 2.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 40,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "bccd0184-542c-4d7f-839d-428c0bdab36a"
+                                    }
+                                ],
+                                "Template": "57662059-f477-41fc-aab1-2e5e2ee38211"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "df4951c8-8d84-4094-9d2e-dba869404c76",
+                            "HistId": "988aff66-0f82-4dd4-9134-d904e029ae63",
+                            "IsPersonalized": false,
+                            "Name": "Neck, Soft Tissue (FSS)",
+                            "Plan": {
+                                "Description": "PHILIPS ICT: Neck",
+                                "GUID": "cb387036-2359-45d2-8e24-818b87e6d0c0",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Neck, Soft Tissue (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "2b770b70-4204-48c9-b076-fc057dc8fc20",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:01:06.666",
+                                                "FlowRate": 1.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:33.333",
+                                                "FlowRate": 1.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "522f5945-7243-4283-bf5e-2d130e63584a"
+                                    }
+                                ],
+                                "Template": "df4951c8-8d84-4094-9d2e-dba869404c76"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "1da873ab-0cbf-44b1-a0e7-1e0f60988ecb",
+                            "HistId": "c263a0b8-641a-44fe-9f30-da4b1146f919",
+                            "IsPersonalized": false,
+                            "Name": "Pulmonary Embolism Study (FSS)",
+                            "Plan": {
+                                "Description": "PHILIPS ICT: Chest",
+                                "GUID": "898efa19-3363-4186-b5b9-4c4ec2e5133b",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Pulmonary Embolism Study (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "7690a282-e9c1-498c-a386-60c08a5e4294",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Test Bolus",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:04.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 20,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:10.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "808c7d58-debf-4b9c-8f34-617220b35683"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "60475201-8cbc-4a5e-93c3-d5726c849402",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:17.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 85,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "b0312294-36e3-43ea-82ca-f80ba265e499"
+                                    }
+                                ],
+                                "Template": "1da873ab-0cbf-44b1-a0e7-1e0f60988ecb"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "9ead0ee0-0f7b-4fc0-9ecc-999c27f6a7c1",
+                            "HistId": "cf759129-1d0a-4eda-a5a4-5dafd29badab",
+                            "IsPersonalized": false,
+                            "Name": "R/O Jugular Vein Thrombosis (FSS)",
+                            "Plan": {
+                                "Description": "SIEMENS SOMATOM SENSATION 64: Neck",
+                                "GUID": "b5f962fe-4ebf-407f-b223-6a8e8f70c346",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "R/O Jugular Vein Thrombosis (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "96dd6816-5b71-4dd3-9598-9fe8d5ab450f",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:33.333",
+                                                "FlowRate": 3,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "dbb8b295-e5cc-4739-a90c-872cceb498d0"
+                                    }
+                                ],
+                                "Template": "9ead0ee0-0f7b-4fc0-9ecc-999c27f6a7c1"
+                            },
+                            "State": "Ready"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Abdomen",
+                    "PlanDigests": [
+                        {
+                            "GUID": "d5f455ec-b0bd-41e1-a452-cad8e9344a37",
+                            "HistId": "5831117b-4a1f-4eb5-9177-15e4c50da313",
+                            "IsPersonalized": false,
+                            "Name": "Adrenal Gland (FSS)",
+                            "Plan": {
+                                "Description": "PHILIPS ICT: Adrenal",
+                                "GUID": "99ac6bed-fa1b-46ad-851c-fad89815cf6c",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Adrenal Gland (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "524c5e61-49b2-4a9f-bf96-738ff257eebf",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:50.000",
+                                                "FlowRate": 2,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:25.000",
+                                                "FlowRate": 2,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "ac3b71cc-115b-4ae1-8026-84fbf58979f2"
+                                    }
+                                ],
+                                "Template": "d5f455ec-b0bd-41e1-a452-cad8e9344a37"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "39276568-7e6a-4622-8ea9-629687a1ca73",
+                            "HistId": "cbcf282c-9e80-4cb7-bab6-809308c37d51",
+                            "IsPersonalized": false,
+                            "Name": "Pancreas - Dual Phase (FSS)",
+                            "Plan": {
+                                "Description": "SIEMENS SOMATOM SENSATION 16: Abdomen",
+                                "GUID": "9d44d4b5-54d8-4d7f-ae01-05ebc7534292",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Pancreas - Dual Phase (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "9aa60314-1b4a-4993-ab19-d8fdbd0a6045",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:33.333",
+                                                "FlowRate": 3,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "8313c110-a842-4aa4-b035-689adebc6c87"
+                                    }
+                                ],
+                                "Template": "39276568-7e6a-4622-8ea9-629687a1ca73"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "f2669bdf-8092-4337-83f1-95f9a849d450",
+                            "HistId": "e5ab9312-c13f-4dd6-b374-c4c026df2c6d",
+                            "IsPersonalized": false,
+                            "Name": "Trauma - Detailed (FSS)",
+                            "Plan": {
+                                "Description": "FOUR SLICE MDCT: Abdomen",
+                                "GUID": "e1fa52b5-c451-46fd-ae39-ebd97f291e73",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Trauma - Detailed (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "bbca1641-02c8-4dc3-b32b-e98d2fd1cf95",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:01:00.000",
+                                                "FlowRate": 2,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 120,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "804b8763-75fb-40d7-bf3a-8d6456ba824e"
+                                    }
+                                ],
+                                "Template": "f2669bdf-8092-4337-83f1-95f9a849d450"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "dbab94aa-97af-48ec-b1e0-439a5ced8b5d",
+                            "HistId": "8330e936-6585-4d29-8012-a38b32a3288a",
+                            "IsPersonalized": false,
+                            "Name": "Urogram, 3-Phase (FSS)",
+                            "Plan": {
+                                "Description": "PHILIPS ICT: Abdomen",
+                                "GUID": "8b52324a-5366-4b31-8bd5-36d1c1633301",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Urogram, 3-Phase (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "e4120fcd-7085-4508-ba20-f4094ed84521",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:25.000",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:12.500",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "5aa18728-f4a0-4ae3-b9c6-ce8246bad1c3"
+                                    }
+                                ],
+                                "Template": "dbab94aa-97af-48ec-b1e0-439a5ced8b5d"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "a9d5d9c6-e9d7-46e5-af49-c970eeadd0d4",
+                            "HistId": "10ebeca1-0061-48f6-be15-787dce56446e",
+                            "IsPersonalized": false,
+                            "Name": "Urogram, Split-Bolus 2-Phase (FSS)",
+                            "Plan": {
+                                "Description": "PHILIPS ICT: Abdomen",
+                                "GUID": "17ce7f87-fc94-4e0a-82c6-0285ef5294ae",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Urogram, Split-Bolus 2-Phase (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "eea4ea1b-464a-42a7-87e8-06740df36645",
+                                        "IsNotScannerSynchronized": true,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Iodine Loading",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:20.000",
+                                                "FlowRate": 2,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 40,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:25.000",
+                                                "FlowRate": 2,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "23bc5286-e2e2-4ecd-bf7f-664be48baa8a"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "724fa3b9-20cb-4aaf-a678-b7d98927caee",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Arterial Phase",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:18.750",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 75,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:12.500",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "4cb5507e-d131-4787-adc1-791be1be1d41"
+                                    }
+                                ],
+                                "Template": "a9d5d9c6-e9d7-46e5-af49-c970eeadd0d4"
+                            },
+                            "State": "Ready"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Liver",
+                    "PlanDigests": [
+                        {
+                            "GUID": "0161bbf8-5cb4-4318-88cb-32fe7d3b4caf",
+                            "HistId": "842ff47d-9ebe-4742-8744-d7cfafa04fc9",
+                            "IsPersonalized": false,
+                            "Name": "Liver, 4-Phase (FSS)",
+                            "Plan": {
+                                "Description": "History: Liver cancer f/u; Cirrhosis; Mass.  http://www.ctisus.com/protocols/49487",
+                                "GUID": "771aef09-a8c5-40be-90f9-ee293d4424c9",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Liver, 4-Phase (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "707f93fe-d9a3-4b9d-a862-15bb80299d69",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:25.000",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:12.500",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                            {
+                                                "Description": "Arterial phase",
+                                                "DisplayHints": [
+                                                ],
+                                                "Name": "Arterial phase",
+                                                "NotifyExternalSystem": false,
+                                                "PostStepTriggerDelay": "00:00:20.000",
+                                                "StartAfterStepCompletes": false
+                                            },
+                                            {
+                                                "Description": "Parenchymal phase",
+                                                "DisplayHints": [
+                                                ],
+                                                "Name": "Parenchymal phase",
+                                                "NotifyExternalSystem": false,
+                                                "PostStepTriggerDelay": "00:00:50.000",
+                                                "StartAfterStepCompletes": false
+                                            },
+                                            {
+                                                "Description": "Portal venous phase",
+                                                "DisplayHints": [
+                                                ],
+                                                "Name": "Portal venous phase",
+                                                "NotifyExternalSystem": false,
+                                                "PostStepTriggerDelay": "00:01:30.000",
+                                                "StartAfterStepCompletes": false
+                                            }
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "cc058372-25a5-4453-b6a6-19a65938beba"
+                                    }
+                                ],
+                                "Template": "0161bbf8-5cb4-4318-88cb-32fe7d3b4caf"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "51b6cdd0-3f3c-47c7-8b99-5f8a2d96c6e7",
+                            "HistId": "31b900db-b69c-433f-98e7-bb3527f10a09",
+                            "IsPersonalized": false,
+                            "Name": "Liver, Hepatic Artery, Transplant Study (FSS)",
+                            "Plan": {
+                                "Description": "Test bolus of 20ml is injected at 5ml/sec. Single scan is just above the celiac axis. After 8sec delay, 14 one-second scans with a one-second interscan delay. Prefer a dual-phase Spiral CT.  http://www.ctisus.com/protocols/48958",
+                                "GUID": "358a2398-20df-49a4-b3d7-1fe823b05dc1",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Liver, Hepatic Artery, Transplant Study (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "fd02c1d3-d8a9-4f33-b23a-a01480722501",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Test Bolus",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:04.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 20,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "34d89cce-b559-4bc3-8992-a79070269b2e"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "a3604980-92ee-49e4-ae8e-ee5c72de02fb",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:36.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 180,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "18660ec4-ae1e-485f-90b4-dd58f0971879"
+                                    }
+                                ],
+                                "Template": "51b6cdd0-3f3c-47c7-8b99-5f8a2d96c6e7"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "7b98199d-acfd-44ef-a6ec-6b4fea9a82d7",
+                            "HistId": "c60f8ee2-bc89-475d-bc7f-ed28f535d6cb",
+                            "IsPersonalized": false,
+                            "Name": "Suspected metastases from colon cancer (FSS)",
+                            "Plan": {
+                                "Description": "Dual-phase study might be better but our experience shows little difference.  Dual-phase spiral CT does not appear to be indicated in the evaluation of liver metastases from colon cancer.  http://www.ctisus.com/protocols/48962",
+                                "GUID": "20d7a963-ca18-41b0-ae11-edf773cdf6c9",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Suspected metastases from colon cancer (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "cfab89ff-4a9e-4a96-8478-b3f13f17df48",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:40.000",
+                                                "FlowRate": 5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 200,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "57320f2e-5540-4d6c-8dee-937d0b2c971a"
+                                    }
+                                ],
+                                "Template": "7b98199d-acfd-44ef-a6ec-6b4fea9a82d7"
+                            },
+                            "State": "Ready"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Kidney",
+                    "PlanDigests": [
+                        {
+                            "GUID": "e4577a44-f069-40ff-9718-77a4451e1fa0",
+                            "HistId": "257357eb-2f5b-41bb-8e4f-dc4f8a8bf28b",
+                            "IsPersonalized": false,
+                            "Name": "Kidney, 2-Phase (FSS)",
+                            "Plan": {
+                                "Description": "SINGLE DETECTOR PROTOCOLS: Kidney",
+                                "GUID": "b5673241-bf4b-4ce8-97a6-3140abc25df8",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Kidney, 2-Phase (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "4d6fdc94-8bc6-42b3-820b-8ace835106e4",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:40.000",
+                                                "FlowRate": 3,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 120,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "b1889c4b-0609-4db5-8510-868cb96ac5c7"
+                                    }
+                                ],
+                                "Template": "e4577a44-f069-40ff-9718-77a4451e1fa0"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "175d964c-03d4-4278-8c0e-baad86a34acb",
+                            "HistId": "99a84dec-379b-4b53-877c-9b833371aa5e",
+                            "IsPersonalized": false,
+                            "Name": "Kidney, End Stage Disease - Visi320 (FSS)",
+                            "Plan": {
+                                "Description": "PHILIPS ICT: Kidney",
+                                "GUID": "9adf2102-582f-4263-a093-d55e9aabea0c",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Kidney, End Stage Disease - Visi320 (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "921eadba-97e0-4576-b9ad-861ed085455f",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:25.000",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 100,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:12.500",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "bd5f13b8-f488-47b8-868c-ccea24757f7d"
+                                    }
+                                ],
+                                "Template": "175d964c-03d4-4278-8c0e-baad86a34acb"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "c080091d-2b38-4712-b147-8385e2219d9c",
+                            "HistId": "e70597bd-6a28-4efe-b9ad-2baf85f4ab54",
+                            "IsPersonalized": false,
+                            "Name": "Kidney, Split Bolus 3-Phase, Donor Study (FSS)",
+                            "Plan": {
+                                "Description": "PHILIPS ICT: Kidney",
+                                "GUID": "d3730556-1973-45bc-a53d-770fff1072dd",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Kidney, Split Bolus 3-Phase, Donor Study (FSS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "2e7fe266-8656-4ccd-89ab-c69b5b8bf244",
+                                        "IsNotScannerSynchronized": true,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:12.500",
+                                                "FlowRate": 2,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 25,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:25.000",
+                                                "FlowRate": 2,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "a53cf6bb-ddf6-4b86-84fb-591fb37dcf34"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "657fa238-52b6-4651-8257-e77aa419304b",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Diagnostic",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:18.750",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 75,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:12.500",
+                                                "FlowRate": 4,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "0fb12522-6e37-49ca-991a-dedf17eb78c8"
+                                    }
+                                ],
+                                "Template": "c080091d-2b38-4712-b147-8385e2219d9c"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "3c6cb061-0353-488f-a44b-9e54224d48ba",
+                            "HistId": "9f8117ee-a7bf-4960-b042-cbce2a1f7971",
+                            "IsPersonalized": false,
+                            "Name": "Urogram Split-Bolus 2-Phase w/TI (FAS)",
+                            "Plan": {
+                                "Description": "Seven and Eight Phase Protocols (DF-130264)",
+                                "GUID": "7d96af6e-fcad-4069-8ef4-5f5e3d96e54e",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Urogram Split-Bolus 2-Phase w/TI (FAS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "a6bbc42f-bab3-455d-aa8c-3e3668fcd367",
+                                        "IsNotScannerSynchronized": true,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": true,
+                                        "Name": "Test Injection",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:06.666",
+                                                "FlowRate": 3,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 20,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "374a5c80-ac6f-47ff-aa85-da2296289e63"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "b8832165-237c-476d-a641-bc389f50a4db",
+                                        "IsNotScannerSynchronized": true,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Iodine Loading",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:26.666",
+                                                "FlowRate": 1.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 40,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:20.000",
+                                                "FlowRate": 1.5,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 30,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "9faac410-3956-4f7a-811e-8fb6ee520f08"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "220c56f9-9619-46b2-838f-284a2f8e4c65",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Arterial Phase",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:26.666",
+                                                "FlowRate": 3,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 80,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:13.333",
+                                                "FlowRate": 3,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 40,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "5921c7bc-a8e3-4027-b5be-9476872aef5b"
+                                    }
+                                ],
+                                "Template": "3c6cb061-0353-488f-a44b-9e54224d48ba"
+                            },
+                            "State": "Ready"
+                        },
+                        {
+                            "GUID": "880cbfa1-8d39-4d91-bc21-f4f1d2344f46",
+                            "HistId": "853d582c-36dc-44fa-a23c-5bd4e5c39b0c",
+                            "IsPersonalized": false,
+                            "Name": "Urogram w/Hydration (FAS)",
+                            "Plan": {
+                                "Description": "Hydration to improve opacification of the ureters.",
+                                "GUID": "fe6a497b-8177-49cd-b0bb-8329f00dbf36",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Urogram w/Hydration (FAS)",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "e43e3085-1c7b-49d2-aaf9-ea0f3b30df05",
+                                        "IsNotScannerSynchronized": true,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": true,
+                                        "Name": "Test Injection",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:05.000",
+                                                "FlowRate": 3,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 15,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "3d345c9c-4e24-4bda-ab49-907f5b8f2b54"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "3fe98b34-5728-4068-803a-ce51ec5e1bf7",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Loading & Hydration",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:25.000",
+                                                "FlowRate": 2,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 50,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:01:40.000",
+                                                "FlowRate": 2,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 200,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                            {
+                                                "Description": "Perform Loading & Hydration injection",
+                                                "DisplayHints": [
+                                                ],
+                                                "Name": "Next Injection",
+                                                "NotifyExternalSystem": false,
+                                                "PostStepTriggerDelay": "00:08:00.000",
+                                                "StartAfterStepCompletes": true
+                                            }
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "39419397-cd6b-4ea9-ac20-e804dfeeb0e5"
+                                    },
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "118b810c-1c45-4e62-a6d3-e98eda89e966",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Arterial Phase",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:26.666",
+                                                "FlowRate": 3,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 80,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:10.000",
+                                                "FlowRate": 3,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 30,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "09e7f7fa-5174-4c69-b9b1-486716c62531"
+                                    }
+                                ],
+                                "Template": "880cbfa1-8d39-4d91-bc21-f4f1d2344f46"
+                            },
+                            "State": "Ready"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Preload",
+                    "PlanDigests": [
+                        {
+                            "GUID": "4cda7965-fafc-45a4-a047-ca3d879da70e",
+                            "HistId": "b4eeff59-5642-4b11-9cfe-fc01e5e4fbbd",
+                            "IsPersonalized": false,
+                            "Name": "1",
+                            "Plan": {
+                                "Description": "",
+                                "GUID": "6efc9601-a5ac-4062-9015-627af7f1d27c",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": true,
+                                "Name": "1",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "dd07af84-97fb-496f-9346-3c4d094b2e73",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Injection",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:10.000",
+                                                "FlowRate": 1,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 10,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:10.000",
+                                                "FlowRate": 1,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 10,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "0cba587c-7216-46d5-9e44-2fc41c5fae2c"
+                                    }
+                                ],
+                                "Template": "4cda7965-fafc-45a4-a047-ca3d879da70e"
+                            },
+                            "State": "Ready"
+                        }
+                    ]
+                },
+                {
+                    "Name": "",
+                    "PlanDigests": [
+                        {
+                            "GUID": "6c17d678-e52a-4570-ab48-0910bb60db92",
+                            "HistId": "fcf3d106-923a-4ca4-bf7c-07ebe47fb2bb",
+                            "IsPersonalized": false,
+                            "Name": "Centargo",
+                            "Plan": {
+                                "Description": "",
+                                "GUID": "7e8c9cd8-e5eb-4931-8d44-b2b9bf2de644",
+                                "IsModifiedFromTemplate": false,
+                                "IsPersonalized": false,
+                                "IsPreloadable": false,
+                                "Name": "Centargo",
+                                "PersonalizationInputs": [
+                                ],
+                                "Steps": [
+                                    {
+                                        "ContrastFluidLocationName": "RC1",
+                                        "GUID": "327f2de8-acd3-432b-91ac-37fd93b9fcf9",
+                                        "IsNotScannerSynchronized": false,
+                                        "IsPreloaded": false,
+                                        "IsTestInjection": false,
+                                        "Name": "Centargo",
+                                        "PersonalizationGenerator": "",
+                                        "PersonalizationInjectionSettings": {
+                                        },
+                                        "PersonalizationInputs": [
+                                        ],
+                                        "PersonalizationModifiers": [
+                                        ],
+                                        "PersonalizationNotices": [
+                                        ],
+                                        "Phases": [
+                                            {
+                                                "ContrastPercentage": 100,
+                                                "Duration": "00:00:10.000",
+                                                "FlowRate": 1,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 10,
+                                                "Type": "Fluid"
+                                            },
+                                            {
+                                                "ContrastPercentage": 0,
+                                                "Duration": "00:00:10.000",
+                                                "FlowRate": 1,
+                                                "OriginalPhaseIdx": -1,
+                                                "TotalVolume": 10,
+                                                "Type": "Fluid"
+                                            }
+                                        ],
+                                        "PressureLimit": 2068,
+                                        "ProgrammedAt": "1970-01-01T00:00:00.000Z",
+                                        "Reminders": [
+                                        ],
+                                        "SalineFluidLocationName": "RS0",
+                                        "Template": "90c89398-457e-417f-bba9-35b4a8b1f77d"
+                                    }
+                                ],
+                                "Template": "6c17d678-e52a-4570-ab48-0910bb60db92"
+                            },
+                            "State": "Ready"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

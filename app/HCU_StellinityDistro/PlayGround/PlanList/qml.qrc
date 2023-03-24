@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>OptionItem.qml</file>
+        <file>OptionList.qml</file>
+        <file>circleMinus.svg</file>
+        <file>circlePlus.svg</file>
+    </qresource>
+</RCC>

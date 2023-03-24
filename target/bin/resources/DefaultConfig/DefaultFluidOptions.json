@@ -1,0 +1,21 @@
+{
+  "ChangedAt": "2016-11-11T03:23:52.617Z",
+  "ContrastFamilies": [
+  ],
+  "SalinePackages": [
+    {
+      "FluidKind": "Flush",
+      "CompatibilityFamily": "",
+      "Brand": "NaCl",
+      "Concentration": 0.9,
+      "ConcentrationUnits": "PERCENTAGE",
+      "Volume": 0.0,
+      "LotBatch": null,
+      "MaximumUseDuration": null,
+      "LoadedAt": null,
+      "ExpirationDate": null,
+      "BarcodePrefixes": []
+    }
+  ],
+  "KnownBarcodes": {}
+}

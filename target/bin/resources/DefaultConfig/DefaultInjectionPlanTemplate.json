@@ -1,0 +1,32 @@
+﻿{
+    "Description": "",
+    "Name": "Centargo",
+    "Steps": [
+        {
+            "IsTestInjection": false,
+            "IsNotScannerSynchronized": false,
+            "Name": "Injection",
+            "Phases": [
+                {
+                    "ContrastPercentage": 100,
+                    "Duration": "00:00:10.000",
+                    "FlowRate": 1,
+                    "TotalVolume": 10,
+                    "Type": "Fluid"
+                },
+                {
+                    "ContrastPercentage": 0,
+                    "Duration": "00:00:10.000",
+                    "FlowRate": 1,
+                    "TotalVolume": 10,
+                    "Type": "Fluid"
+                }
+            ],
+            "PressureLimit": 2068,
+            "Reminders": [
+            ],
+            "ContrastFluidLocationName": "RC1",
+            "SalineFluidLocationName": "RS0"
+        }
+    ]
+}

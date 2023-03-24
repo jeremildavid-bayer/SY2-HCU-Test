@@ -1,0 +1,291 @@
+{
+    "Config": {
+        "Hidden_FluidOptions": {
+            "ChangedAt": "2020-03-07T20:07:24.926Z",
+            "DefaultValue": {
+                "ChangedAt": "2016-11-11T03:23:52.617Z",
+                "ContrastFamilies": [
+                ],
+                "KnownBarcodes": {
+                },
+                "SalinePackages": [
+                    {
+                        "BarcodePrefixes": [
+                        ],
+                        "Brand": "NaCl",
+                        "CompatibilityFamily": "",
+                        "Concentration": 0.9,
+                        "ConcentrationUnits": "PERCENTAGE",
+                        "ExpirationDate": null,
+                        "FluidKind": "Flush",
+                        "LoadedAt": null,
+                        "LotBatch": null,
+                        "MaximumUseDuration": null,
+                        "Volume": 0
+                    }
+                ]
+            },
+            "DisplayIndex": 20,
+            "KeyName": "Hidden_FluidOptions",
+            "Units": "",
+            "ValidDataType": "map",
+            "ValidList": [
+            ],
+            "ValidRange": {
+                "LowerLimitInclusive": 0,
+                "ResolutionIncrement": 0,
+                "UpperLimitInclusive": 0
+            },
+            "Value": {
+                "ChangedAt": "2020-02-10T05:01:46.838Z",
+                "ContrastFamilies": [
+                    {
+                        "FluidPackages": [
+                            {
+                                "BarcodePrefixes": [
+                                    "04060182000010"
+                                ],
+                                "Brand": "Ultravist",
+                                "CompatibilityFamily": "Family1",
+                                "Concentration": 300,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 500
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Ultravist",
+                                "CompatibilityFamily": "Family1",
+                                "Concentration": 300,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 200
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Ultravist",
+                                "CompatibilityFamily": "Family1",
+                                "Concentration": 300,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 100
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Ultravist",
+                                "CompatibilityFamily": "Family1",
+                                "Concentration": 370,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 500
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Ultravist",
+                                "CompatibilityFamily": "Family1",
+                                "Concentration": 370,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 200
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                    "04060182000058"
+                                ],
+                                "Brand": "Ultravist",
+                                "CompatibilityFamily": "Family1",
+                                "Concentration": 370,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 100
+                            }
+                        ],
+                        "Name": "Family1"
+                    },
+                    {
+                        "FluidPackages": [
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Iopamidol",
+                                "CompatibilityFamily": "Family2",
+                                "Concentration": 300,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 500
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Iopamidol",
+                                "CompatibilityFamily": "Family2",
+                                "Concentration": 300,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 200
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Iopamidol",
+                                "CompatibilityFamily": "Family2",
+                                "Concentration": 300,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 100
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Iopamidol",
+                                "CompatibilityFamily": "Family2",
+                                "Concentration": 370,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 500
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Iopamidol",
+                                "CompatibilityFamily": "Family2",
+                                "Concentration": 370,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 200
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Iopamidol",
+                                "CompatibilityFamily": "Family2",
+                                "Concentration": 370,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 100
+                            }
+                        ],
+                        "Name": "Family2"
+                    },
+                    {
+                        "FluidPackages": [
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Iohexol",
+                                "CompatibilityFamily": "Family3",
+                                "Concentration": 350,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 500
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Iohexol",
+                                "CompatibilityFamily": "Family3",
+                                "Concentration": 350,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 200
+                            },
+                            {
+                                "BarcodePrefixes": [
+                                ],
+                                "Brand": "Iohexol",
+                                "CompatibilityFamily": "Family3",
+                                "Concentration": 350,
+                                "ConcentrationUnits": "MG_I_PER_ML",
+                                "ExpirationDate": null,
+                                "FluidKind": "Contrast",
+                                "LoadedAt": null,
+                                "LotBatch": "",
+                                "MaximumUseDuration": "10:00:00.000",
+                                "Volume": 100
+                            }
+                        ],
+                        "Name": "Family3"
+                    }
+                ],
+                "KnownBarcodes": {
+                },
+                "SalinePackages": [
+                    {
+                        "BarcodePrefixes": [
+                        ],
+                        "Brand": "NaCl",
+                        "CompatibilityFamily": "",
+                        "Concentration": 0.9,
+                        "ConcentrationUnits": "PERCENTAGE",
+                        "ExpirationDate": null,
+                        "FluidKind": "Flush",
+                        "LoadedAt": null,
+                        "LotBatch": "",
+                        "MaximumUseDuration": null,
+                        "Volume": 0
+                    }
+                ]
+            }
+        }   
+    }
+}
